@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بيانات المستثمرين | المؤسسة العامة للجيولوجيا والثروة المعدنية</title>
+    <title>بيانات المستثمرين | وزارة الطاقة - المؤسسة العامة للجيولوجيا والثروة المعدنية</title>
     <style>
         :root {
             --bg-deep: #062314;
             --bg-gradient: linear-gradient(135deg, #04160d 0%, #0c3821 50%, #062314 100%);
-            --accent-gold: #d4af37;
-            --gold-light: #f4e8b1;
+            --accent-gold: #c5a059;
             --text-dark: #1f2937;
             --card-bg: rgba(255, 255, 255, 0.98);
             --border-color: #cbd5e1;
@@ -34,53 +33,75 @@
             margin: 0 auto;
         }
 
-        /* الترويسة المطابقة للطابع الرسمي */
-        .platform-header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 20px;
-        }
-
-        .emblem-container {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 15px auto;
+        /* ترويسة وزارة الطاقة الرسمية المطابقة للصورة تماماً */
+        .official-banner {
             background: #ffffff;
-            border: 3px solid var(--accent-gold);
-            border-radius: 50%;
+            border-radius: 10px;
+            padding: 15px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             display: flex;
             align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            justify-content: space-between;
+            border-top: 4px solid var(--accent-gold);
         }
 
-        .eagle-svg {
-            width: 70px;
+        .banner-left {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            border-right: 2px solid #e2e8f0;
+            padding-right: 20px;
+        }
+
+        .ministry-ar {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--bg-deep);
+            margin: 0 0 2px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .ministry-en {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--bg-deep);
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .banner-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .eagle-svg-banner {
+            width: 85px;
             height: auto;
         }
 
-        .platform-subtitle {
-            font-size: 1.1rem;
-            color: var(--accent-gold);
-            font-weight: 600;
-            margin-bottom: 8px;
-            letter-spacing: 0.5px;
+        /* عنوان الاستمارة الإضافي */
+        .form-intro {
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 0 10px;
         }
 
-        .platform-title {
-            font-size: 2rem;
+        .form-main-title {
+            font-size: 1.8rem;
             font-weight: 800;
             color: #ffffff;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
-        .platform-desc {
-            font-size: 0.98rem;
-            color: #e2e8f0;
-            max-width: 650px;
+        .form-desc {
+            font-size: 0.95rem;
+            color: #d1d5db;
+            max-width: 700px;
             margin: 0 auto;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
         /* بطاقة الاستمارة البيضاء */
@@ -147,7 +168,7 @@
         input:focus, select:focus, textarea:focus {
             border-color: var(--accent-gold);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.25);
         }
 
         /* صفة المستثمر */
@@ -175,7 +196,7 @@
             height: 18px;
         }
 
-        /* شبكة الخامات المعدنية المحدثة بدقة */
+        /* شبكة الخامات المعدنية المطلوبة */
         .ores-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -253,6 +274,8 @@
             .form-grid { grid-template-columns: 1fr; }
             .ores-container { grid-template-columns: repeat(2, 1fr); }
             .form-card { padding: 20px; }
+            .official-banner { flex-direction: column-reverse; text-align: center; gap: 10px; }
+            .banner-left { border-right: none; padding-right: 0; text-align: center; }
         }
 
         @media print {
@@ -265,23 +288,31 @@
 <body>
 
 <div class="wrapper">
-    <!-- الترويسة والشعار الذهبي -->
-    <div class="platform-header">
-        <div class="emblem-container">
-            <svg class="eagle-svg" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#0C3821" d="M120 10 L140 50 L185 50 L150 78 L165 120 L120 92 L75 120 L90 78 L55 50 L100 50 Z"/>
-                <path fill="#0C3821" d="M120 35 C70 35 30 75 30 125 C30 160 50 190 80 205 L80 180 C60 168 48 148 48 125 C48 85 80 53 120 53 C160 53 192 85 192 125 C192 148 180 168 160 180 L160 205 C190 190 210 160 210 125 C210 75 170 35 120 35 Z"/>
-                <path fill="#D4AF37" d="M120 65 L132 95 L165 95 L138 115 L148 145 L120 125 L92 145 L102 115 L75 95 L108 95 Z"/>
-                <rect x="70" y="160" width="100" height="45" rx="5" fill="#D4AF37"/>
+    <!-- الترويسة الرسمية المطابقة لصورة وزارة الطاقة تماماً -->
+    <div class="official-banner">
+        <div class="banner-left">
+            <h1 class="ministry-ar">وزارة الطاقة</h1>
+            <h2 class="ministry-en">MINISTRY OF ENERGY</h2>
+        </div>
+        <div class="banner-right">
+            <!-- شعار العقاب السوري الذهبي المعتمد -->
+            <svg class="eagle-svg-banner" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#C5A059" d="M120 10 L140 50 L185 50 L150 78 L165 120 L120 92 L75 120 L90 78 L55 50 L100 50 Z"/>
+                <path fill="#C5A059" d="M120 35 C70 35 30 75 30 125 C30 160 50 190 80 205 L80 180 C60 168 48 148 48 125 C48 85 80 53 120 53 C160 53 192 85 192 125 C192 148 180 168 160 180 L160 205 C190 190 210 160 210 125 C210 75 170 35 120 35 Z"/>
+                <path fill="#8e6f30" d="M120 65 L132 95 L165 95 L138 115 L148 145 L120 125 L92 145 L102 115 L75 95 L108 95 Z"/>
+                <rect x="70" y="160" width="100" height="45" rx="5" fill="#C5A059"/>
                 <text x="120" y="188" font-family="'Traditional Arabic', serif" font-size="20" font-weight="bold" fill="#062314" text-anchor="middle">سورية</text>
             </svg>
         </div>
-        <div class="platform-subtitle">وزارة الطاقة • المؤسسة العامة للجيولوجيا والثروة المعدنية</div>
-        <h1 class="platform-title">بيانات المستثمرين - قطاع الاستثمار المعدني</h1>
-        <p class="platform-desc">نرجو التكرّم بتعبئة البيانات المطلوبة بدقة. تُدرج هذه المعلومات ضمن قاعدة بيانات المستثمرين والشركات لدى المؤسسة لدراسة الفرص الاستثمارية وتسهيل التواصل مع الجهات المعنية، مع الحفاظ الكامل على سرية البيانات.</p>
     </div>
 
-    <!-- استمارة التعبئة -->
+    <!-- مقدمة الاستمارة -->
+    <div class="form-intro">
+        <h2 class="form-main-title">بيانات المستثمرين - استثمار الخامات المعدنية</h2>
+        <p class="form-desc">المؤسسة العامة للجيولوجيا والثروة المعدنية • نرجو التكرّم بتعبئة البيانات المطلوبة بدقة لدراسة الفرص الاستثمارية وتسهيل التواصل مع الجهات المعنية مع الحفاظ الكامل على سرية البيانات.</p>
+    </div>
+
+    <!-- استمارة التعبئة البيضاء الفاخرة -->
     <div class="form-card">
         <form id="miningInvestForm">
             
@@ -343,7 +374,7 @@
                         <label class="ore-checkbox"><input type="checkbox" name="ores" value="zeolite"> الزيوليت</label>
                         <label class="ore-checkbox"><input type="checkbox" name="ores" value="basalt"> البازلت</label>
                         <label class="ore-checkbox"><input type="checkbox" name="ores" value="marble"> الرخام</label>
-                        <label class="ore-checkbox"><input type="checkbox" name="ores" value="salt"> الملح</label>
+                        <label class="ore-checkbox"><input type="checkbox" name="ore" value="salt"> الملح</label>
                         <label class="ore-checkbox"><input type="checkbox" name="ores" value="other"> خامات أخرى</label>
                     </div>
                 </div>
